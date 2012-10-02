@@ -13,14 +13,14 @@ uma definicao de todas as operacoes feitas ou executadas da parte financeira.
 
 Caracteristicas:
 • Gerenciamento de Clientes;
-•	Gerenciamento de Pedidos;
-•	Gerenciamento do Faturamento;
+• Gerenciamento de Pedidos;
+• Gerenciamento do Faturamento;
 
 Rascunho Desenhado:
 Usuario Master (No caso ‘eu’, pois terei acesso a tudo);
-  Usuario Vendedor (Consultor da Marca);
+	Usuario Vendedor (Consultor da Marca);
 		Marcas (Natura, Avon, Herbalife);
 			Produtos (Produtos de cada marca);
 				Entrada (Compra o produto para revender (Contas a Pagar));
 					Venda (Revendendo o produto comprado (Contas a Receber));
-					  Usuario Cliente (Sempre sera pessoa fisica).
+						Usuario Cliente (Sempre sera pessoa fisica).
