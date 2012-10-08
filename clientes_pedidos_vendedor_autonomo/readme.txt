@@ -8,6 +8,8 @@ de todos os produtos das marcas em que o vendedor operar, ter o controle dos ped
 compras e vendas de cada produto.
 O mesmo servirá como um sistema de reserva de produto onde o usuário do tipo cliente entra assim tendo acesso a todos os produtos
 cadastrados podendo fazer reservas, com isso sempre gerando um pedido com os produtos solicitados.
+Ao o usuário do tipo vendedor autônomo logar no site, o mesmo terá acesso a todos os pedidos gerado, assim consequente também às
+contas a pagar e as contas a receber que foram originadas.
 Cada produto ao ser comprado será revendido e obterá um lucro. Os clientes sempre serão pessoas físicas. Também terá uma definição
 de todas as operações feitas ou executadas da parte financeira.
 
