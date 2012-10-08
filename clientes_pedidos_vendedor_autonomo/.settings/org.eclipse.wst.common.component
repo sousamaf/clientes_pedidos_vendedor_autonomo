@@ -3,6 +3,7 @@
     <wb-module deploy-name="clientes_pedidos_vendedor_autonomo">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/scr"/>
         <property name="context-root" value="clientes_pedidos_vendedor_autonomo"/>
         <property name="java-output-path" value="/clientes_pedidos_vendedor_autonomo/build/classes"/>
     </wb-module>
