@@ -8,63 +8,113 @@
 <ui:composition template="/resources/templates/templatepadrao.xhtml">
 	<ui:define name="content">
 		<h:form>
-			<f:view locale="pt_BR">
-				<h:panelGrid columns="3">
-					<h:outputText id="txNome" value="#{msg.cadastro_nome}" for="nome"></h:outputText>
-					<h:inputText id="nome" label="#{msg.cadastro_nome}"
-						value="#{usuario.nome}" required="true"
-						requiredMessage="#{msg.cadastro_mensagem_nome}"></h:inputText>
-					<h:message for="nome"></h:message>
+			<h:panelGrid columns="3">
+				<h:outputText id="txNome" value="Nome:" for="nome" />
+				<h:inputText id="nome" label="#{msg.cadastro_nome}"
+					value="#{usuario.nome}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_nome}"></h:inputText>
+				<h:message for="nome"></h:message>
 
-					<h:outputText id="txSobrenome" value="#{msg.cadastro_sobrenome}"
-						for="sobrenome"></h:outputText>
-					<h:inputText id="sobrenome" label="#{msg.cadastro_sobrenome}"
-						value="#{usuario.sobrenome}" required="false"
-						requiredMessage="#{msg.cadastro_mensagem_sobrenome}"></h:inputText>
-					<h:message for="sobrenome"></h:message>
+				<h:outputText id="txSobrenome" value="Sobrenome:" for="sobrenome" />
+				<h:inputText id="sobrenome" label="#{msg.cadastro_sobrenome}"
+					value="#{usuario.sobrenome}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_sobrenome}"></h:inputText>
+				<h:message for="sobrenome"></h:message>
 
-					<h:outputText id="txCPF" value="#{msg.cadastro_cpf}" for="cpf"></h:outputText>
-					<h:inputText id="cpf" label="#{msg.cadastro_cpf}"
-						value="#{usuario.cpf}" required="true"
-						requiredMessage="#{msg.cadastro_mensagem_cpf}"></h:inputText>
-					<h:message for="cpf"></h:message>
+				<h:outputText id="txSexo" value="Sexo:" for="sexo" />
+				<h:inputText id="sexo" label="#{msg.cadastro_sexo}"
+					value="#{usuario.sexo}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_sexo}"></h:inputText>
+				<h:message for="sexo"></h:message>
 
-					<h:outputText id="txProfissao" value="#{msg.cadastro_profissao}"
-						for="profissao"></h:outputText>
-					<h:inputText id="profissao" label="#{msg.cadastro_profissao}"
-						value="#{usuario.profissao}" required="false"
-						requiredMessage="#{msg.cadastro_mensagem_profissao}"></h:inputText>
-					<h:message for="profissao"></h:message>
+				<h:outputText id="txNascimento" value="Data de Nascimento:"
+					for="nascimento" />
+				<h:inputText id="nascimento" label="#{msg.cadastro_nascimento}"
+					value="#{usuario.nascimento}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_nascimento}"></h:inputText>
+				<h:message for="nascimento"></h:message>
 
-					<h:outputText id="txEmail" value="#{msg.cadastro_email}"
-						for="email"></h:outputText>
-					<h:inputText id="email" label="#{msg.cadastro_email}"
-						value="#{usuario.email}" required="false"
-						requiredMessage="#{msg.cadastro_mensagem_email_invalido}"></h:inputText>
-					<h:message for="email"></h:message>
+				<h:outputText id="txCPF" value="CPF:" for="cpf" />
+				<h:inputText id="cpf" label="#{msg.cadastro_cpf}"
+					value="#{usuario.cpf}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_cpf}"></h:inputText>
+				<h:message for="cpf"></h:message>
 
-					<h:outputText id="txTelefone" value="#{msg.cadastro_telefone}"
-						for="telefone"></h:outputText>
-					<h:inputText id="telefone" label="#{msg.cadastro_telefone}"
-						value="#{usuario.telefone}" required="false"
-						requiredMessage="#{msg.cadastro_mensagem_telefone}"></h:inputText>
-					<h:message for="telefone"></h:message>
+				<h:outputText id="txRG" value="RG:" for="rg" />
+				<h:inputText id="rg" label="#{msg.cadastro_rg}"
+					value="#{usuario.rg}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_rg}"></h:inputText>
+				<h:message for="rg"></h:message>
 
-					<h:outputText id="txEndereco" value="#{msg.cadastro_endereco}"
-						for="endereco"></h:outputText>
-					<h:inputText id="endereco" label="#{msg.casastro_endereco}"
-						value="#{usuario.endereco}" required="false"
-						requiredMessage="#{msg.cadastro_mensagem_endereco}"></h:inputText>
-					<h:message for="endereco"></h:message>
-					<h:commandButton action="mostracadastro"
-						value="#{msg.cadastro_botao_cadastrar}"></h:commandButton>
-					<h:outputText></h:outputText>
-					<h:outputText></h:outputText>
-				</h:panelGrid>
-			</f:view>
+				<h:outputText id="txEmail" value="E-mail:" for="email" />
+				<h:inputText id="email" label="#{msg.cadastro_email}"
+					value="#{usuario.email}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_email_invalido}"></h:inputText>
+				<h:message for="email"></h:message>
+
+				<h:outputText id="txLogin" value="Nome de Usuário:" for="login" />
+				<h:inputText id="login" label="#{msg.cadastro_login}"
+					value="#{usuario.login}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_login}"></h:inputText>
+				<h:message for="login"></h:message>
+
+				<h:outputText id="txSenha" value="Senha:" for="senha" />
+				<h:inputSecret id="senha" label="#{msg.cadastro_senha}"
+					value="#{usuario.senha}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_senha}"></h:inputSecret>
+				<h:message for="senha"></h:message>
+
+				<h:outputText id="txConfirmaSenha" value="Confirmação de Senha"
+					for="confirmasenha" />
+				<h:inputSecret id="confirmasenha"
+					label="#{msg.cadastro_confirmasenha}"
+					value="#{usuario.confirmasenha}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_confirmasenha}"></h:inputSecret>
+				<h:message for="confirmasenha"></h:message>
+
+				<h:outputText id="txTelefone" value="Telefone:" for="telefone" />
+				<h:inputText id="telefone" label="#{msg.cadastro_telefone}"
+					value="#{usuario.telefone}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_telefone}"></h:inputText>
+				<h:message for="telefone"></h:message>
+
+				<h:outputText id="txEndereco" value="Endereço:" for="endereco" />
+				<h:inputText id="endereco" label="#{msg.casastro_endereco}"
+					value="#{usuario.endereco}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_endereco}"></h:inputText>
+				<h:message for="endereco"></h:message>
+
+				<h:outputText id="txRua" value="Rua:" for="rua" />
+				<h:inputText id="rua" label="#{msg.casastro_rua}"
+					value="#{usuario.rua}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_rua}"></h:inputText>
+				<h:message for="rua"></h:message>
+
+				<h:outputText id="txCEP" value="CEP:" for="cep" />
+				<h:inputText id="cep" label="#{msg.casastro_cep}"
+					value="#{usuario.cep}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_cep}"></h:inputText>
+				<h:message for="cep"></h:message>
+
+				<h:outputText id="txCidade" value="Cidade:" for="cidade" />
+				<h:inputText id="cidade" label="#{msg.casastro_cidade}"
+					value="#{usuario.cidade}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_cidade}"></h:inputText>
+				<h:message for="cidade"></h:message>
+
+				<h:outputText id="txEstado" value="Estado:" for="estado" />
+				<h:inputText id="estado" label="#{msg.casastro_estado}"
+					value="#{usuario.estado}" required="true"
+					requiredMessage="#{msg.cadastro_mensagem_estado}"></h:inputText>
+				<h:message for="estado"></h:message>
+
+				<h:commandButton value="Salvar"></h:commandButton>
+				<h:outputText></h:outputText>
+				<h:outputText></h:outputText>
+			</h:panelGrid>
 		</h:form>
 		<h:form>
-			<h:commandLink action="index" value="#{msg.cadastro_link_retornar}"></h:commandLink>
+			<h:commandLink value="Link para Retornar"></h:commandLink>
 		</h:form>
 	</ui:define>
 </ui:composition>
