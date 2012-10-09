@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition template="/resources/templates/templatepadrao.xhtml">
+	<ui:define name="content">
+		<h:form>
+			<f:view locale="pt_BR">
+				<h:panelGrid columns="3">
+					<h:outputText id="txNome" value="#{msg.cadastro_nome}" for="nome"></h:outputText>
+					<h:inputText id="nome" label="#{msg.cadastro_nome}"
+						value="#{usuario.nome}" required="true"
+						requiredMessage="#{msg.cadastro_mensagem_nome}"></h:inputText>
+					<h:message for="nome"></h:message>
+
+					<h:outputText id="txSobrenome" value="#{msg.cadastro_sobrenome}"
+						for="sobrenome"></h:outputText>
+					<h:inputText id="sobrenome" label="#{msg.cadastro_sobrenome}"
+						value="#{usuario.sobrenome}" required="false"
+						requiredMessage="#{msg.cadastro_mensagem_sobrenome}"></h:inputText>
+					<h:message for="sobrenome"></h:message>
+
+					<h:outputText id="txCPF" value="#{msg.cadastro_cpf}" for="cpf"></h:outputText>
+					<h:inputText id="cpf" label="#{msg.cadastro_cpf}"
+						value="#{usuario.cpf}" required="true"
+						requiredMessage="#{msg.cadastro_mensagem_cpf}"></h:inputText>
+					<h:message for="cpf"></h:message>
+
+					<h:outputText id="txProfissao" value="#{msg.cadastro_profissao}"
+						for="profissao"></h:outputText>
+					<h:inputText id="profissao" label="#{msg.cadastro_profissao}"
+						value="#{usuario.profissao}" required="false"
+						requiredMessage="#{msg.cadastro_mensagem_profissao}"></h:inputText>
+					<h:message for="profissao"></h:message>
+
+					<h:outputText id="txEmail" value="#{msg.cadastro_email}"
+						for="email"></h:outputText>
+					<h:inputText id="email" label="#{msg.cadastro_email}"
+						value="#{usuario.email}" required="false"
+						requiredMessage="#{msg.cadastro_mensagem_email_invalido}"></h:inputText>
+					<h:message for="email"></h:message>
+
+					<h:outputText id="txTelefone" value="#{msg.cadastro_telefone}"
+						for="telefone"></h:outputText>
+					<h:inputText id="telefone" label="#{msg.cadastro_telefone}"
+						value="#{usuario.telefone}" required="false"
+						requiredMessage="#{msg.cadastro_mensagem_telefone}"></h:inputText>
+					<h:message for="telefone"></h:message>
+
+					<h:outputText id="txEndereco" value="#{msg.cadastro_endereco}"
+						for="endereco"></h:outputText>
+					<h:inputText id="endereco" label="#{msg.casastro_endereco}"
+						value="#{usuario.endereco}" required="false"
+						requiredMessage="#{msg.cadastro_mensagem_endereco}"></h:inputText>
+					<h:message for="endereco"></h:message>
+					<h:commandButton action="mostracadastro"
+						value="#{msg.cadastro_botao_cadastrar}"></h:commandButton>
+					<h:outputText></h:outputText>
+					<h:outputText></h:outputText>
+				</h:panelGrid>
+			</f:view>
+		</h:form>
+		<h:form>
+			<h:commandLink action="index" value="#{msg.cadastro_link_retornar}"></h:commandLink>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
